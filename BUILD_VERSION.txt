@@ -1,0 +1,4 @@
+Smart Campus Route Planner - FIXED ICON BUILD
+Build: 2026-10-17-icon-fix-2
+Feature card icons are drawn using Tkinter Canvas vector shapes (no emoji or symbol-font glyphs).
+If question marks remain, the app is being launched from an older extracted folder. Extract this ZIP to a NEW folder and run its RUN_APP.bat.

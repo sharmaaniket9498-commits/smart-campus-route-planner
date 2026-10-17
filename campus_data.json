@@ -1,0 +1,124 @@
+{
+  "saved_places": [
+    {
+      "id": "college",
+      "name": "GCD Dhaliara College",
+      "category": "College",
+      "area": "Dhaliara, Kangra",
+      "lat": 31.895,
+      "lon": 76.222
+    },
+    {
+      "id": "home",
+      "name": "Home (Kharar)",
+      "category": "Home",
+      "area": "Kharar, Mohali",
+      "lat": 30.746,
+      "lon": 76.647
+    },
+    {
+      "id": "chandigarh",
+      "name": "Chandigarh",
+      "category": "City",
+      "area": "Chandigarh",
+      "lat": 30.733,
+      "lon": 76.779
+    },
+    {
+      "id": "mohali",
+      "name": "Mohali",
+      "category": "City",
+      "area": "Mohali",
+      "lat": 30.704,
+      "lon": 76.717
+    },
+    {
+      "id": "pgi",
+      "name": "PGI Chandigarh",
+      "category": "Hospital",
+      "area": "Chandigarh",
+      "lat": 30.764,
+      "lon": 76.775
+    },
+    {
+      "id": "market",
+      "name": "Sector 22 Market",
+      "category": "Shopping",
+      "area": "Chandigarh",
+      "lat": 30.733,
+      "lon": 76.768
+    },
+    {
+      "id": "cu",
+      "name": "Chandigarh University",
+      "category": "University",
+      "area": "Gharuan, Mohali",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "id": "landran",
+      "name": "Landran",
+      "category": "Town",
+      "area": "Landran, Mohali",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "id": "kharar",
+      "name": "Kharar Bus Stand",
+      "category": "Transit",
+      "area": "Kharar, Mohali",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "id": "airport",
+      "name": "Shaheed Bhagat Singh Airport",
+      "category": "Airport",
+      "area": "Mohali",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "id": "elante",
+      "name": "Elante Mall",
+      "category": "Shopping",
+      "area": "Industrial Area, Chandigarh",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "id": "sukhna",
+      "name": "Sukhna Lake",
+      "category": "Attraction",
+      "area": "Chandigarh",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "id": "isb",
+      "name": "ISB Mohali",
+      "category": "Education",
+      "area": "Knowledge City, Mohali",
+      "lat": null,
+      "lon": null
+    },
+    {
+      "id": "northcountry",
+      "name": "North Country Mall",
+      "category": "Shopping",
+      "area": "Kharar-Landran Road",
+      "lat": null,
+      "lon": null
+    }
+  ],
+  "preferences": {
+    "profile_name": "Ankit Sharma",
+    "email": "ankit@example.com",
+    "travel_mode": "Bike",
+    "priority": "Fastest",
+    "show_estimates": true,
+    "compact_details": false
+  }
+}
