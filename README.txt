@@ -1,3 +1,14 @@
+## 🌐 Live Demo
+
+**Live Website:** [Smart Campus Route Planner](https://campus-route-planner-alpha.vercel.app/)
+
+Try the deployed web version here: https://campus-route-planner-alpha.vercel.app/
+
+> Note: The live website is the deployed web version. The Python CustomTkinter desktop application runs separately on Windows.
+
+
+
+
 SMART CAMPUS ROUTE PLANNER — Python Desktop Application
 ========================================================
 
