@@ -1,6 +1,8 @@
 ## 🌐 Live Demo
 
-**Live Website:** [Smart Campus Route Planner](https://campus-route-planner-alpha.vercel.app/)
+**Live Website:** ## 🌐 Live Demo
+
+[🚀 Open Smart Campus Route Planner](https://campus-route-planner-alpha.vercel.app/)
 
 Try the deployed web version here: https://campus-route-planner-alpha.vercel.app/
 
