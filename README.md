@@ -2,7 +2,7 @@
 
 ## 🌐 Live Demo
 
-[🚀 Open Smart Campus Route Planner](https://campus-route-planner-alpha.vercel.app/)
+[🚀 Open Smart Campus Route Planner](https://smart-campus-route-planner.onrender.com)
 
 A campus route-planning application featuring graph algorithms, route comparison, and an interactive graph explorer.
 
