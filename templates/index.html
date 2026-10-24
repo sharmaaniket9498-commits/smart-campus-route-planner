@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Campus Route Planner</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="#Home"><span class="brand-mark">◆</span><span>Smart Campus<br>Route Planner</span></a>
+  <nav id="nav">
+    <button class="nav-item active" data-page="Home">Home</button>
+    <button class="nav-item" data-page="Plan Route">Plan Route</button>
+    <button class="nav-item" data-page="Graph Explorer">Graph Explorer</button>
+    <button class="nav-item" data-page="Saved Places">Saved Places</button>
+    <button class="nav-item" data-page="Theory">Theory</button>
+  </nav>
+  <div class="sidebar-foot">SMART ROUTES<br>BETTER JOURNEYS</div>
+</aside>
+<main class="main">
+  <section class="page visible" id="page-Home">
+    <div class="hero"><div class="eyebrow">CAMPUS NAVIGATION</div><h1>Smart Campus Route Planner</h1><p>Plan a route, explore connected locations, and save places.</p><button class="primary" data-go="Plan Route">Plan a route <span>→</span></button></div>
+    <div class="feature-grid">
+      <button class="feature" data-go="Plan Route"><span class="feature-icon">↗</span><h3>Plan Route</h3><p>Choose your starting point and destination.</p></button>
+      <button class="feature" data-go="Graph Explorer"><span class="feature-icon">◎</span><h3>Graph Explorer</h3><p>Explore locations and the connections between them.</p></button>
+      <button class="feature" data-go="Saved Places"><span class="feature-icon">▤</span><h3>Saved Places</h3><p>Keep your frequently used locations in this browser.</p></button>
+    </div>
+    <div class="note">Distances, travel times and costs are illustrative sample estimates — not live road or traffic data.</div>
+  </section>
+  <section class="page" id="page-Plan Route">
+    <div class="page-heading"><div class="eyebrow">ROUTE FINDER</div><h1>Plan your route</h1><p>Select two locations and your travel preferences.</p></div>
+    <div class="panel form-panel"><form id="route-form">
+      <label>Starting point<select id="start" required>{% for location in locations %}<option>{{ location }}</option>{% endfor %}</select></label>
+      <label>Destination<select id="end" required>{% for location in locations %}<option>{{ location }}</option>{% endfor %}</select></label>
+      <div class="form-row"><label>Travel mode<select id="mode"><option>Bike</option><option>Car</option><option>Bus</option><option>Walk</option></select></label><label>Route priority<select id="priority"><option>Fastest</option><option>Shortest Distance</option><option>Lowest Cost</option></select></label></div>
+      <button class="primary" type="submit">Find route →</button>
+    </form></div>
+    <div id="route-result" class="panel result-panel empty">Your route result will appear here.</div>
+  </section>
+  <section class="page" id="page-Graph Explorer">
+    <div class="page-heading"><div class="eyebrow">CONNECTED LOCATIONS</div><h1>Graph Explorer</h1><p>Choose a start and destination to highlight a route on the sample graph.</p></div>
+    <div class="panel graph-controls"><label>Start<select id="graph-start">{% for location in locations %}<option>{{ location }}</option>{% endfor %}</select></label><label>Destination<select id="graph-end">{% for location in locations %}<option>{{ location }}</option>{% endfor %}</select></label><button class="primary" id="graph-show">Show route</button></div>
+    <div class="panel graph-panel"><svg id="graph" viewBox="0 0 1000 560" role="img" aria-label="Sample location connection graph"></svg></div>
+    <div id="graph-summary" class="panel result-panel empty">Select locations and press “Show route”.</div>
+  </section>
+  <section class="page" id="page-Saved Places">
+    <div class="page-heading"><div class="eyebrow">YOUR SHORTLIST</div><h1>Saved Places</h1><p>Saved places are stored locally in this browser.</p></div>
+    <div class="panel form-panel"><form id="place-form"><label>Place name<input id="place-name" placeholder="e.g. Library Block" required maxlength="70"></label><div class="form-row"><label>Category<select id="place-category"><option>Campus</option><option>Study</option><option>Food</option><option>Transport</option><option>Other</option></select></label><label>Area<input id="place-area" placeholder="e.g. University campus"></label></div><button class="primary">Save place +</button></form></div>
+    <div id="saved-list" class="saved-list"></div>
+  </section>
+  <section class="page" id="page-Theory">
+    <div class="page-heading"><div class="eyebrow">PROJECT REFERENCE</div><h1>Algorithms & Concepts</h1><p>How the route planner works.</p></div>
+    <div class="theory-grid">
+      <article class="panel theory-card"><span class="tag">WEIGHTED SHORTEST PATH</span><h2>Dijkstra’s Algorithm</h2><p>Finds the minimum-total-weight path from a start node to a destination when edge weights are non-negative. The selected weight can represent time, distance or estimated cost.</p></article>
+      <article class="panel theory-card"><span class="tag">UNWEIGHTED SEARCH</span><h2>Breadth-First Search (BFS)</h2><p>Explores a graph level by level. It finds a path with the fewest edges, but that path is not necessarily the shortest by distance or time.</p></article>
+      <article class="panel theory-card"><span class="tag">HEURISTIC SEARCH</span><h2>A* Algorithm</h2><p>Combines the cost already travelled with a heuristic estimate of the remaining cost to guide its search toward the destination.</p></article>
+      <article class="panel theory-card"><span class="tag">ALL-PAIRS PATHS</span><h2>Floyd–Warshall Algorithm</h2><p>Computes shortest-path costs between every pair of nodes. It is useful when many different source–destination queries need to be answered.</p></article>
+      <article class="panel theory-card"><span class="tag">GRAPH MODEL</span><h2>Weighted Graph</h2><p>Each place is represented as a node. Connections between places are edges, and each edge stores sample distance, time and cost values.</p></article>
+      <article class="panel theory-card"><span class="tag">LIMITATION</span><h2>Sample estimates</h2><p>This project uses illustrative connections and estimates. It does not use live traffic, GPS tracking or a live road-routing service.</p></article>
+    </div>
+  </section>
+  <footer>SMART CAMPUS ROUTE PLANNER <span>DEMO DATA · NOT LIVE TRAFFIC</span></footer>
+</main>
+<script>window.LOCATIONS = {{ locations|tojson }};</script>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body></html>

@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: smart-campus-route-planner
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
